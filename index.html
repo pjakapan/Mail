@@ -52,19 +52,8 @@
       // Load form.io with json:loadJsonForm.js
       // -------------------------------------------------------------------------------------------------------------------
 
-      Formio.createForm(document.getElementById('formio'), arrForm).then(function (instance) {
-
-        // -----------------------------------------------
-        // Trigger on submit event.
-        // -----------------------------------------------
-
-        instance.on('submit', (submission) => {
-
-          console.log(submission);
-
-        });
-      });
-    };
+      Formio.createForm(document.getElementById('formio'), arrForm);
+    }
   </script>
 </body>
 

@@ -1,7 +1,7 @@
 {
     "_id": "5a124e0ebe414f000190c170",
     "machineName": "kegoilcdymkwamk:mail",
-    "modified": "2017-11-20T06:30:12.553Z",
+    "modified": "2017-11-20T06:37:38.792Z",
     "title": "Mail",
     "display": "form",
     "name": "mail",
@@ -111,7 +111,32 @@
                     }
                 },
                 {
-                    "isNew": false,
+                    "storage": "url",
+                    "input": true,
+                    "tableView": true,
+                    "label": "Attachment",
+                    "key": "panelAttachment",
+                    "image": false,
+                    "imageSize": "200",
+                    "placeholder": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "persistent": true,
+                    "hidden": false,
+                    "clearOnHide": true,
+                    "type": "file",
+                    "tags": [],
+                    "conditional": {
+                        "show": "",
+                        "when": null,
+                        "eq": ""
+                    },
+                    "properties": {
+                        "": ""
+                    }
+                },
+                {
                     "input": true,
                     "tableView": true,
                     "label": "",

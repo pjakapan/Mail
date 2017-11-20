@@ -1,7 +1,7 @@
 {
     "_id": "5a124e0ebe414f000190c170",
     "machineName": "kegoilcdymkwamk:mail",
-    "modified": "2017-11-20T06:58:41.427Z",
+    "modified": "2017-11-20T10:11:14.283Z",
     "title": "Mail",
     "display": "form",
     "name": "mail",
@@ -24,6 +24,7 @@
             "type": "panel",
             "components": [
                 {
+                    "lockKey": true,
                     "properties": {
                         "": ""
                     },
@@ -46,8 +47,8 @@
                     "suffix": "",
                     "prefix": "",
                     "placeholder": "",
-                    "key": "panelTo",
-                    "label": "To",
+                    "key": "panelFrom",
+                    "label": "From",
                     "inputType": "email",
                     "tableView": true,
                     "input": true
@@ -75,8 +76,8 @@
                     "suffix": "",
                     "prefix": "",
                     "placeholder": "",
-                    "key": "panelCc",
-                    "label": "CC",
+                    "key": "panelTo",
+                    "label": "To",
                     "inputType": "email",
                     "tableView": true,
                     "input": true
@@ -302,7 +303,7 @@
             "type": "button",
             "theme": "primary",
             "disableOnInvalid": false,
-            "action": "submit",
+            "action": "custom",
             "block": false,
             "rightIcon": "",
             "leftIcon": "",
@@ -310,7 +311,8 @@
             "key": "submit",
             "tableView": false,
             "label": "Submit",
-            "input": true
+            "input": true,
+            "custom": "var url = window.location.href;\nvar qs = parse_query_string(url);\nconsole.log('qs = '+qs.id_token);\nvar settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://togetherservice.azurewebsites.net/api/callsp\",\n  \"method\": \"POST\",\n  \"headers\": {\n    \"content-type\": \"application/json\",\n    \"authorization\": \"Bearer \"+qs.id_token,\n    \"cache-control\": \"no-cache\"\n  },\n  \"processData\": false,\n  \"data\": \"{\\n    \\\"sender\\\": \"+ form.submission.data.panelFrom +\",\\n    \\\"receiver\\\": \"+ form.submission.data.panelTo +\",\\n    \\\"subject\\\": \"+ form.submission.data.panelSubject +\",\\n    \\\"attachment_url\\\": \"+ form.submission.data.panelAttachment +\",\\n    \\\"body\\\": \"+ form.submission.data.panelTextareaField +\"\\n}\"\n}\n\n$.ajax(settings).done(function () {  \nconsole.log(\"success\");   \n});"
         }
     ],
     "owner": "59b0f3b82f12080007486f7a",

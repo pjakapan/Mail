@@ -1,7 +1,7 @@
 {
     "_id": "5a124e0ebe414f000190c170",
     "machineName": "kegoilcdymkwamk:mail",
-    "modified": "2017-11-20T06:37:38.792Z",
+    "modified": "2017-11-20T06:58:41.427Z",
     "title": "Mail",
     "display": "form",
     "name": "mail",
@@ -10,146 +10,168 @@
     "created": "2017-11-20T03:37:50.503Z",
     "components": [
         {
-            "key": "panel",
-            "input": false,
-            "title": "mail form",
-            "theme": "default",
-            "tableView": false,
+            "lockKey": true,
+            "properties": {
+                "": ""
+            },
+            "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+            },
+            "tags": [],
+            "breadcrumb": "default",
+            "type": "panel",
             "components": [
                 {
-                    "input": true,
-                    "tableView": true,
-                    "inputType": "email",
-                    "label": "To",
+                    "properties": {
+                        "": ""
+                    },
+                    "conditional": {
+                        "eq": "",
+                        "when": null,
+                        "show": ""
+                    },
+                    "tags": [],
+                    "type": "email",
+                    "kickbox": {
+                        "enabled": false
+                    },
+                    "clearOnHide": true,
+                    "hidden": false,
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "",
                     "key": "panelTo",
-                    "placeholder": "",
-                    "prefix": "",
-                    "suffix": "",
-                    "defaultValue": "",
-                    "protected": false,
-                    "unique": false,
-                    "persistent": true,
-                    "hidden": false,
-                    "clearOnHide": true,
-                    "kickbox": {
-                        "enabled": false
-                    },
-                    "type": "email",
-                    "tags": [],
-                    "conditional": {
-                        "show": "",
-                        "when": null,
-                        "eq": ""
-                    },
-                    "properties": {
-                        "": ""
-                    }
-                },
-                {
-                    "input": true,
-                    "tableView": true,
+                    "label": "To",
                     "inputType": "email",
-                    "label": "CC",
-                    "key": "panelCc",
-                    "placeholder": "",
-                    "prefix": "",
-                    "suffix": "",
-                    "defaultValue": "",
-                    "protected": false,
-                    "unique": false,
-                    "persistent": true,
-                    "hidden": false,
-                    "clearOnHide": true,
+                    "tableView": true,
+                    "input": true
+                },
+                {
+                    "properties": {
+                        "": ""
+                    },
+                    "conditional": {
+                        "eq": "",
+                        "when": null,
+                        "show": ""
+                    },
+                    "tags": [],
+                    "type": "email",
                     "kickbox": {
                         "enabled": false
                     },
-                    "type": "email",
-                    "tags": [],
-                    "conditional": {
-                        "show": "",
-                        "when": null,
-                        "eq": ""
-                    },
-                    "properties": {
-                        "": ""
-                    }
-                },
-                {
-                    "input": true,
-                    "tableView": true,
-                    "inputType": "text",
-                    "inputMask": "",
-                    "label": "Subject",
-                    "key": "panelSubject",
-                    "placeholder": "",
-                    "prefix": "",
-                    "suffix": "",
-                    "multiple": false,
-                    "defaultValue": "",
-                    "protected": false,
+                    "clearOnHide": true,
+                    "hidden": false,
+                    "persistent": true,
                     "unique": false,
-                    "persistent": true,
-                    "hidden": false,
-                    "clearOnHide": true,
-                    "validate": {
-                        "required": false,
-                        "minLength": "",
-                        "maxLength": "",
-                        "pattern": "",
-                        "custom": "",
-                        "customPrivate": false
-                    },
-                    "conditional": {
-                        "show": "",
-                        "when": null,
-                        "eq": ""
-                    },
-                    "type": "textfield",
-                    "tags": [],
-                    "properties": {
-                        "": ""
-                    }
-                },
-                {
-                    "storage": "url",
-                    "input": true,
-                    "tableView": true,
-                    "label": "Attachment",
-                    "key": "panelAttachment",
-                    "image": false,
-                    "imageSize": "200",
-                    "placeholder": "",
-                    "multiple": false,
-                    "defaultValue": "",
                     "protected": false,
-                    "persistent": true,
-                    "hidden": false,
-                    "clearOnHide": true,
-                    "type": "file",
-                    "tags": [],
-                    "conditional": {
-                        "show": "",
-                        "when": null,
-                        "eq": ""
-                    },
-                    "properties": {
-                        "": ""
-                    }
-                },
-                {
-                    "input": true,
-                    "tableView": true,
-                    "label": "",
-                    "key": "panelTextareaField",
-                    "placeholder": "",
-                    "prefix": "",
+                    "defaultValue": "",
                     "suffix": "",
-                    "rows": 3,
-                    "multiple": false,
-                    "defaultValue": "",
-                    "protected": false,
-                    "persistent": true,
+                    "prefix": "",
+                    "placeholder": "",
+                    "key": "panelCc",
+                    "label": "CC",
+                    "inputType": "email",
+                    "tableView": true,
+                    "input": true
+                },
+                {
+                    "properties": {
+                        "": ""
+                    },
+                    "tags": [],
+                    "type": "textfield",
+                    "conditional": {
+                        "eq": "",
+                        "when": null,
+                        "show": ""
+                    },
+                    "validate": {
+                        "customPrivate": false,
+                        "custom": "",
+                        "pattern": "",
+                        "maxLength": "",
+                        "minLength": "",
+                        "required": false
+                    },
+                    "clearOnHide": true,
                     "hidden": false,
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "",
+                    "key": "panelSubject",
+                    "label": "Subject",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                },
+                {
+                    "properties": {
+                        "": ""
+                    },
+                    "tags": [],
+                    "type": "textfield",
+                    "conditional": {
+                        "eq": "",
+                        "when": null,
+                        "show": ""
+                    },
+                    "validate": {
+                        "customPrivate": false,
+                        "custom": "",
+                        "pattern": "",
+                        "maxLength": "",
+                        "minLength": "",
+                        "required": false
+                    },
+                    "clearOnHide": true,
+                    "hidden": false,
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "",
+                    "key": "panelAttachment",
+                    "label": "Attachment",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                },
+                {
+                    "properties": {
+                        "": ""
+                    },
+                    "conditional": {
+                        "eq": "",
+                        "when": null,
+                        "show": ""
+                    },
+                    "tags": [],
+                    "type": "textarea",
+                    "validate": {
+                        "custom": "",
+                        "pattern": "",
+                        "maxLength": "",
+                        "minLength": "",
+                        "required": false
+                    },
+                    "clearOnHide": true,
                     "wysiwyg": {
                         "width": "100%",
                         "height": "400px",
@@ -158,14 +180,13 @@
                         "extraPlugins": "justify,font",
                         "toolbarGroups": [
                             {
-                                "name": "basicstyles",
                                 "groups": [
                                     "basicstyles",
                                     "cleanup"
-                                ]
+                                ],
+                                "name": "basicstyles"
                             },
                             {
-                                "name": "paragraph",
                                 "groups": [
                                     "list",
                                     "indent",
@@ -178,129 +199,118 @@
                                     "JustifyCenter",
                                     "JustifyRight",
                                     "JustifyBlock"
-                                ]
+                                ],
+                                "name": "paragraph"
                             },
                             {
-                                "name": "links",
                                 "groups": [
                                     "links"
-                                ]
+                                ],
+                                "name": "links"
                             },
                             {
-                                "name": "insert",
                                 "groups": [
                                     "insert"
-                                ]
+                                ],
+                                "name": "insert"
                             },
                             "/",
                             {
-                                "name": "styles",
                                 "groups": [
                                     "Styles",
                                     "Format",
                                     "Font",
                                     "FontSize"
-                                ]
+                                ],
+                                "name": "styles"
                             },
                             {
-                                "name": "colors",
                                 "groups": [
                                     "colors"
-                                ]
+                                ],
+                                "name": "colors"
                             },
                             {
-                                "name": "clipboard",
                                 "groups": [
                                     "clipboard",
                                     "undo"
-                                ]
+                                ],
+                                "name": "clipboard"
                             },
                             {
-                                "name": "editing",
                                 "groups": [
                                     "find",
                                     "selection",
                                     "spellchecker",
                                     "editing"
-                                ]
+                                ],
+                                "name": "editing"
                             },
                             {
-                                "name": "document",
                                 "groups": [
                                     "mode",
                                     "document",
                                     "doctools"
-                                ]
+                                ],
+                                "name": "document"
                             },
                             {
-                                "name": "others",
                                 "groups": [
                                     "others"
-                                ]
+                                ],
+                                "name": "others"
                             },
                             {
-                                "name": "tools",
                                 "groups": [
                                     "tools"
-                                ]
+                                ],
+                                "name": "tools"
                             }
                         ]
                     },
-                    "clearOnHide": true,
-                    "validate": {
-                        "required": false,
-                        "minLength": "",
-                        "maxLength": "",
-                        "pattern": "",
-                        "custom": ""
-                    },
-                    "type": "textarea",
-                    "tags": [],
-                    "conditional": {
-                        "show": "",
-                        "when": null,
-                        "eq": ""
-                    },
-                    "properties": {
-                        "": ""
-                    }
+                    "hidden": false,
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "rows": 3,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "",
+                    "key": "panelTextareaField",
+                    "label": "",
+                    "tableView": true,
+                    "input": true
                 }
             ],
-            "type": "panel",
-            "breadcrumb": "default",
-            "tags": [],
-            "conditional": {
-                "show": "",
-                "when": null,
-                "eq": ""
-            },
-            "properties": {
-                "": ""
-            },
-            "lockKey": true
+            "tableView": false,
+            "theme": "default",
+            "title": "mail form",
+            "input": false,
+            "key": "panel"
         },
         {
-            "input": true,
-            "label": "Submit",
-            "tableView": false,
-            "key": "submit",
-            "size": "md",
-            "leftIcon": "",
-            "rightIcon": "",
-            "block": false,
-            "action": "submit",
-            "disableOnInvalid": false,
-            "theme": "primary",
-            "type": "button",
-            "tags": [],
-            "conditional": {
-                "show": "",
-                "when": null,
-                "eq": ""
-            },
             "properties": {
                 "": ""
-            }
+            },
+            "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+            },
+            "tags": [],
+            "type": "button",
+            "theme": "primary",
+            "disableOnInvalid": false,
+            "action": "submit",
+            "block": false,
+            "rightIcon": "",
+            "leftIcon": "",
+            "size": "md",
+            "key": "submit",
+            "tableView": false,
+            "label": "Submit",
+            "input": true
         }
     ],
     "owner": "59b0f3b82f12080007486f7a",

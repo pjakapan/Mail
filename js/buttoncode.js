@@ -12,7 +12,7 @@ var settings = {
     "cache-control": "no-cache"
   },
   "processData": false,
-  "data": "{\n    \"sender\": "+ form.submission.data.panelFrom +",\n    \"receiver\": "+ form.submission.data.panelTo +",\n    \"subject\": "+ form.submission.data.panelSubject +",\n    \"attachment_url\": "+ form.submission.data.panelAttachment +",\n    \"body\": "+ form.submission.data.panelTextareaField +"\n}"
+  "data": "{\n    \"sender\": \""+ form.submission.data.panelFrom +"\",\n    \"receiver\": \""+ form.submission.data.panelTo +"\",\n    \"subject\": \""+ form.submission.data.panelSubject +"\",\n    \"attachment_url\": \""+ form.submission.data.panelAttachment +"\",\n    \"body\": \""+ form.submission.data.panelTextareaField +"\"\n}"
 }
 
 $.ajax(settings).done(function () {  

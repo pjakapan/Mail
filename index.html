@@ -1,35 +1,46 @@
 <html>
-    
-    <head>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/formio.full.min.css">
-      <link rel="stylesheet" href="css/app.css">
-      <link rel="stylesheet" href="css/quill.snow.css">
-      <script src="js/formio.full.min.js"></script>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/loadJsonForm.js"></script>
-      <script src="js/quill.min.js"></script>
-    </head>
-    
-    <body>
-    
-      <div class="container-fuild">
-        <div class="jumbotron">
-          <h1 style="text-align:center">MAIL FORM</h1>
-        </div>
-        <div class="col-lg-offset-2 col-lg-8" id="formio"></div>
-      </div>
-    
-      <script type="text/javascript">
-        window.onload = function () {
-    
-          // -------------------------------------------------------------------------------------------------------------------
-          // Load form.io with json:loadJsonForm.js
-          // -------------------------------------------------------------------------------------------------------------------
-    
-          Formio.createForm(document.getElementById('formio'), arrForm);
-        };
-      </script>
-    </body>
-    
-    </html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/formio.full.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/quill.snow.css">
+  <script src="js/formio.full.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/loadJsonForm.js"></script>
+  <script src="js/quill.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fuild">
+    <div class="jumbotron">
+      <h1 style="text-align:center">MAIL FORM</h1>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8" id="formio"></div>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function () {
+
+      // -------------------------------------------------------------------------------------------------------------------
+      // Load form.io with json:loadJsonForm.js
+      // -------------------------------------------------------------------------------------------------------------------
+
+      Formio.createForm(document.getElementById('formio1'), arrForm).then(function (instance) {
+
+        // -----------------------------------------------
+        // Trigger on submit event.
+        // -----------------------------------------------
+
+        instance.on('submit', (submission) => {
+
+          console.log(submission);
+        
+        });
+      });
+    };
+  </script>
+</body>
+
+</html>

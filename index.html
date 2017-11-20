@@ -21,39 +21,32 @@
   </div>
 
   <script type="text/javascript">
+    var url = window.location.href;
+    var qs = parse_query_string(url);
+    console.log('qs = ' + qs.id_token);
 
-    window.onload = function () {
-
-      var url = window.location.href;
-      var qs = parse_query_string(url);
-      console.log('qs = ' + qs.id_token);
-
-      function parse_query_string(query) {
-        var vars = query.split("&");
-        var query_string = {};
-        for (var i = 0; i < vars.length; i++) {
-          var pair = vars[i].split("=");
-          // If first entry with this name
-          if (typeof query_string[pair[0]] === "undefined") {
-            query_string[pair[0]] = decodeURIComponent(pair[1]);
-            // If second entry with this name
-          } else if (typeof query_string[pair[0]] === "string") {
-            var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
-            query_string[pair[0]] = arr;
-            // If third or later entry with this name
-          } else {
-            query_string[pair[0]].push(decodeURIComponent(pair[1]));
-          }
+    function parse_query_string(query) {
+      var vars = query.split("&");
+      var query_string = {};
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        // If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+          query_string[pair[0]] = decodeURIComponent(pair[1]);
+          // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+          var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+          query_string[pair[0]] = arr;
+          // If third or later entry with this name
+        } else {
+          query_string[pair[0]].push(decodeURIComponent(pair[1]));
         }
-        return query_string;
       }
-
-      // -------------------------------------------------------------------------------------------------------------------
-      // Load form.io with json:loadJsonForm.js
-      // -------------------------------------------------------------------------------------------------------------------
-
-      Formio.createForm(document.getElementById('formio'), arrForm);
+      return query_string;
     }
+
+    Formio.createForm(document.getElementById('formio'), arrForm);
+
   </script>
 </body>
 

@@ -35,6 +35,8 @@
 
   <script type="text/javascript">
 
+    var arrForm = loadForm();
+
     Formio.createForm(document.getElementById('formio'), arrForm).then(function (instance) {
 
       // ------------------------------------------------------------------------------------------
@@ -77,6 +79,22 @@
       if (!results) return null;
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function loadForm() {
+
+      var json = null;
+      var getsetting = {
+        'async': true,
+        'global': false,
+        'url': "./data/mailform2.json",
+        'dataType': "json",
+        "method": "GET"
+      }
+      $.ajax(getsetting).done(function (data) {
+        json = data;
+      });
+      return json;
     }
 
   </script>

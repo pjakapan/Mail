@@ -1,7 +1,7 @@
 {
     "_id": "5a124e0ebe414f000190c170",
     "machineName": "kegoilcdymkwamk:mail",
-    "modified": "2017-11-21T02:41:57.386Z",
+    "modified": "2017-11-21T02:47:11.613Z",
     "title": "Mail",
     "display": "form",
     "name": "mail",
@@ -10,169 +10,157 @@
     "created": "2017-11-20T03:37:50.503Z",
     "components": [
         {
-            "lockKey": true,
-            "properties": {
-                "": ""
-            },
-            "conditional": {
-                "eq": "",
-                "when": null,
-                "show": ""
-            },
-            "tags": [],
-            "breadcrumb": "default",
-            "type": "panel",
+            "key": "panel",
+            "input": false,
+            "title": "mail form",
+            "theme": "default",
+            "tableView": false,
             "components": [
                 {
-                    "lockKey": true,
-                    "properties": {
-                        "": ""
-                    },
-                    "conditional": {
-                        "eq": "",
-                        "when": null,
-                        "show": ""
-                    },
-                    "tags": [],
-                    "type": "email",
-                    "kickbox": {
-                        "enabled": false
-                    },
-                    "clearOnHide": true,
-                    "hidden": false,
-                    "persistent": true,
-                    "unique": false,
-                    "protected": false,
-                    "defaultValue": "",
-                    "suffix": "",
-                    "prefix": "",
-                    "placeholder": "",
-                    "key": "panelFrom",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "email",
                     "label": "From",
-                    "inputType": "email",
-                    "tableView": true,
-                    "input": true
-                },
-                {
-                    "properties": {
-                        "": ""
-                    },
-                    "conditional": {
-                        "eq": "",
-                        "when": null,
-                        "show": ""
-                    },
-                    "tags": [],
-                    "type": "email",
+                    "key": "panelFrom",
+                    "placeholder": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "hidden": false,
+                    "clearOnHide": true,
                     "kickbox": {
                         "enabled": false
                     },
-                    "clearOnHide": true,
-                    "hidden": false,
-                    "persistent": true,
-                    "unique": false,
-                    "protected": false,
-                    "defaultValue": "",
-                    "suffix": "",
-                    "prefix": "",
-                    "placeholder": "",
-                    "key": "panelTo",
-                    "label": "To",
+                    "type": "email",
+                    "tags": [],
+                    "conditional": {
+                        "show": "",
+                        "when": null,
+                        "eq": ""
+                    },
+                    "properties": {
+                        "": ""
+                    },
+                    "lockKey": true
+                },
+                {
+                    "input": true,
+                    "tableView": true,
                     "inputType": "email",
-                    "tableView": true,
-                    "input": true
-                },
-                {
+                    "label": "To",
+                    "key": "panelTo",
+                    "placeholder": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "hidden": false,
+                    "clearOnHide": true,
+                    "kickbox": {
+                        "enabled": false
+                    },
+                    "type": "email",
+                    "tags": [],
+                    "conditional": {
+                        "show": "",
+                        "when": null,
+                        "eq": ""
+                    },
                     "properties": {
                         "": ""
-                    },
-                    "tags": [],
-                    "type": "textfield",
-                    "conditional": {
-                        "eq": "",
-                        "when": null,
-                        "show": ""
-                    },
-                    "validate": {
-                        "customPrivate": false,
-                        "custom": "",
-                        "pattern": "",
-                        "maxLength": "",
-                        "minLength": "",
-                        "required": false
-                    },
-                    "clearOnHide": true,
-                    "hidden": false,
-                    "persistent": true,
-                    "unique": false,
-                    "protected": false,
-                    "defaultValue": "",
-                    "multiple": false,
-                    "suffix": "",
-                    "prefix": "",
-                    "placeholder": "",
-                    "key": "panelSubject",
+                    }
+                },
+                {
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
                     "label": "Subject",
-                    "inputMask": "",
-                    "inputType": "text",
-                    "tableView": true,
-                    "input": true
-                },
-                {
-                    "properties": {
-                        "": ""
-                    },
-                    "tags": [],
-                    "type": "textfield",
-                    "conditional": {
-                        "eq": "",
-                        "when": null,
-                        "show": ""
-                    },
-                    "validate": {
-                        "customPrivate": false,
-                        "custom": "",
-                        "pattern": "",
-                        "maxLength": "",
-                        "minLength": "",
-                        "required": false
-                    },
-                    "clearOnHide": true,
-                    "hidden": false,
-                    "persistent": true,
-                    "unique": false,
-                    "protected": false,
-                    "defaultValue": "",
-                    "multiple": false,
-                    "suffix": "",
-                    "prefix": "",
+                    "key": "panelSubject",
                     "placeholder": "",
-                    "key": "panelAttachment",
-                    "label": "Attachment",
-                    "inputMask": "",
-                    "inputType": "text",
-                    "tableView": true,
-                    "input": true
-                },
-                {
-                    "properties": {
-                        "": ""
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "hidden": false,
+                    "clearOnHide": true,
+                    "validate": {
+                        "required": false,
+                        "minLength": "",
+                        "maxLength": "",
+                        "pattern": "",
+                        "custom": "",
+                        "customPrivate": false
                     },
                     "conditional": {
-                        "eq": "",
+                        "show": "",
                         "when": null,
-                        "show": ""
+                        "eq": ""
                     },
+                    "type": "textfield",
                     "tags": [],
-                    "type": "textarea",
-                    "validate": {
-                        "custom": "",
-                        "pattern": "",
-                        "maxLength": "",
-                        "minLength": "",
-                        "required": false
-                    },
+                    "properties": {
+                        "": ""
+                    }
+                },
+                {
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Attachment",
+                    "key": "panelAttachment",
+                    "placeholder": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "hidden": false,
                     "clearOnHide": true,
+                    "validate": {
+                        "required": false,
+                        "minLength": "",
+                        "maxLength": "",
+                        "pattern": "",
+                        "custom": "",
+                        "customPrivate": false
+                    },
+                    "conditional": {
+                        "show": "",
+                        "when": null,
+                        "eq": ""
+                    },
+                    "type": "textfield",
+                    "tags": [],
+                    "properties": {
+                        "": ""
+                    }
+                },
+                {
+                    "input": true,
+                    "tableView": true,
+                    "label": "",
+                    "key": "panelTextareaField",
+                    "placeholder": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "rows": 3,
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "persistent": true,
+                    "hidden": false,
                     "wysiwyg": {
                         "width": "100%",
                         "height": "400px",
@@ -181,13 +169,14 @@
                         "extraPlugins": "justify,font",
                         "toolbarGroups": [
                             {
+                                "name": "basicstyles",
                                 "groups": [
                                     "basicstyles",
                                     "cleanup"
-                                ],
-                                "name": "basicstyles"
+                                ]
                             },
                             {
+                                "name": "paragraph",
                                 "groups": [
                                     "list",
                                     "indent",
@@ -200,119 +189,130 @@
                                     "JustifyCenter",
                                     "JustifyRight",
                                     "JustifyBlock"
-                                ],
-                                "name": "paragraph"
+                                ]
                             },
                             {
+                                "name": "links",
                                 "groups": [
                                     "links"
-                                ],
-                                "name": "links"
+                                ]
                             },
                             {
+                                "name": "insert",
                                 "groups": [
                                     "insert"
-                                ],
-                                "name": "insert"
+                                ]
                             },
                             "/",
                             {
+                                "name": "styles",
                                 "groups": [
                                     "Styles",
                                     "Format",
                                     "Font",
                                     "FontSize"
-                                ],
-                                "name": "styles"
+                                ]
                             },
                             {
+                                "name": "colors",
                                 "groups": [
                                     "colors"
-                                ],
-                                "name": "colors"
+                                ]
                             },
                             {
+                                "name": "clipboard",
                                 "groups": [
                                     "clipboard",
                                     "undo"
-                                ],
-                                "name": "clipboard"
+                                ]
                             },
                             {
+                                "name": "editing",
                                 "groups": [
                                     "find",
                                     "selection",
                                     "spellchecker",
                                     "editing"
-                                ],
-                                "name": "editing"
+                                ]
                             },
                             {
+                                "name": "document",
                                 "groups": [
                                     "mode",
                                     "document",
                                     "doctools"
-                                ],
-                                "name": "document"
+                                ]
                             },
                             {
+                                "name": "others",
                                 "groups": [
                                     "others"
-                                ],
-                                "name": "others"
+                                ]
                             },
                             {
+                                "name": "tools",
                                 "groups": [
                                     "tools"
-                                ],
-                                "name": "tools"
+                                ]
                             }
                         ]
                     },
-                    "hidden": false,
-                    "persistent": true,
-                    "protected": false,
-                    "defaultValue": "",
-                    "multiple": false,
-                    "rows": 3,
-                    "suffix": "",
-                    "prefix": "",
-                    "placeholder": "",
-                    "key": "panelTextareaField",
-                    "label": "",
-                    "tableView": true,
-                    "input": true
+                    "clearOnHide": true,
+                    "validate": {
+                        "required": false,
+                        "minLength": "",
+                        "maxLength": "",
+                        "pattern": "",
+                        "custom": ""
+                    },
+                    "type": "textarea",
+                    "tags": [],
+                    "conditional": {
+                        "show": "",
+                        "when": null,
+                        "eq": ""
+                    },
+                    "properties": {
+                        "": ""
+                    }
                 }
             ],
-            "tableView": false,
-            "theme": "default",
-            "title": "mail form",
-            "input": false,
-            "key": "panel"
-        },
-        {
+            "type": "panel",
+            "breadcrumb": "default",
+            "tags": [],
+            "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+            },
             "properties": {
                 "": ""
             },
-            "conditional": {
-                "eq": "",
-                "when": null,
-                "show": ""
-            },
-            "tags": [],
-            "type": "button",
-            "theme": "primary",
-            "disableOnInvalid": false,
-            "action": "custom",
-            "block": false,
-            "rightIcon": "",
-            "leftIcon": "",
-            "size": "md",
-            "key": "submit",
-            "tableView": false,
-            "label": "Submit",
+            "lockKey": true
+        },
+        {
+            "custom": "var url = window.location.href;\nvar qs = parse_query_string(url);\nconsole.log('qs = '+qs.id_token);\nvar settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://togetherservice.azurewebsites.net/api/callsp\",\n  \"method\": \"POST\",\n  \"headers\": {\n    \"content-type\": \"application/json\",\n    \"authorization\": \"Bearer \"+qs.id_token,\n    \"cache-control\": \"no-cache\"\n  },\n  \"processData\": false,\n  \"data\": \"{\\n    \\\"sender\\\": \\\"\"+ form.submission.data.panelFrom +\"\\\",\\n    \\\"receiver\\\": \\\"\"+ form.submission.data.panelTo +\"\\\",\\n    \\\"subject\\\": \\\"\"+ form.submission.data.panelSubject +\"\\\",\\n    \\\"attachment_url\\\": \\\"\"+ form.submission.data.panelAttachment +\"\\\",\\n    \\\"body\\\": \\\"\"+ form.submission.data.panelTextareaField +\"\\\"\\n}\"\n}\n\n$.ajax(settings).done(function () {  \nform.setAlert('success', 'The mail has been sent successfully.');\nconsole.log(\"success\");   \n}).fail(function (error){\nform.setAlert('danger',  'Unsent the email' + error.message);\n});",
             "input": true,
-            "custom": "var url = window.location.href;\nvar qs = parse_query_string(url);\nconsole.log('qs = '+qs.id_token);\nvar settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://togetherservice.azurewebsites.net/api/callsp\",\n  \"method\": \"POST\",\n  \"headers\": {\n    \"content-type\": \"application/json\",\n    \"authorization\": \"Bearer \"+qs.id_token,\n    \"cache-control\": \"no-cache\"\n  },\n  \"processData\": false,\n  \"data\": \"{\\n    \\\"sender\\\": \\\"\"+ form.submission.data.panelFrom +\"\\\",\\n    \\\"receiver\\\": \\\"\"+ form.submission.data.panelTo +\"\\\",\\n    \\\"subject\\\": \\\"\"+ form.submission.data.panelSubject +\"\\\",\\n    \\\"attachment_url\\\": \\\"\"+ form.submission.data.panelAttachment +\"\\\",\\n    \\\"body\\\": \\\"\"+ form.submission.data.panelTextareaField +\"\\\"\\n}\"\n}\n\n$.ajax(settings).done(function () {  \nform.setAlert('success', 'The mail has been sent successfully.');\nconsole.log(\"success\");   \n}).fail(function (error){\nform.setAlert('danger', error);\n});"
+            "label": "Submit",
+            "tableView": false,
+            "key": "submit",
+            "size": "md",
+            "leftIcon": "",
+            "rightIcon": "",
+            "block": false,
+            "action": "custom",
+            "disableOnInvalid": false,
+            "theme": "primary",
+            "type": "button",
+            "tags": [],
+            "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+            },
+            "properties": {
+                "": ""
+            }
         }
     ],
     "owner": "59b0f3b82f12080007486f7a",

@@ -24,26 +24,19 @@
 
   <script type="text/javascript">
     var url = window.location.href;
-    var qs = parse_query_string(url);
-    function parse_query_string(query) {
-      var vars = query.split("&");
-      var query_string = {};
-      for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        // If first entry with this name
-        if (typeof query_string[pair[0]] === "undefined") {
-          query_string[pair[0]] = decodeURIComponent(pair[1]);
-          // If second entry with this name
-        } else if (typeof query_string[pair[0]] === "string") {
-          var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
-          query_string[pair[0]] = arr;
-          // If third or later entry with this name
-        } else {
-          query_string[pair[0]].push(decodeURIComponent(pair[1]));
-        }
-      }
-      return query_string;
-    }
+    var id_token = getParameterByName('id_token',url);
+
+    console.log(id_token);
+
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
 
     Formio.createForm(document.getElementById('formio'), arrForm);
 

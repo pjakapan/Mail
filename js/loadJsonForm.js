@@ -9,7 +9,7 @@ function loadForm() {
 
     var json = null;
     var getsetting = {
-        'async': false,
+        'async': true,
         'global': false,
         'url': "./data/mailform2.json",
         'dataType': "json",

@@ -182,7 +182,7 @@
                     "clearOnHide": true,
                     "wysiwyg": {
                         "width": "100%",
-                        "height": "100px",
+                        "height": "400px",
                         "uiColor": "#eeeeee",
                         "removeButtons": "Cut,Copy,Paste,Underline,Subscript,Superscript,Scayt,About",
                         "extraPlugins": "justify,font",

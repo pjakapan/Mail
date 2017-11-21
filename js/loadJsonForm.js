@@ -11,7 +11,7 @@ function loadForm() {
     var getsetting = {
         'async': false,
         'global': false,
-        'url': "./data/mailform.json",
+        'url': "./data/mailform2.json",
         'dataType': "json",
         "method": "GET"
     }

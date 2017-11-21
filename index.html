@@ -58,13 +58,13 @@
         }
 
         $.ajax(settings).done(function () {
-          form.setAlert('success', 'The mail has been sent successfully.');
+          instance.setAlert('success', 'The mail has been sent successfully.');
           alert('The mail has been sent successfully.');
-          form.reset();
-          form.render();
+          instance.reset();
+          instance.render();
           console.log("success");
         }).fail(function (error) {
-          form.setAlert('danger', 'Unsent the email');
+          instance.setAlert('danger', 'Unsent the email');
         });
       });
     });
